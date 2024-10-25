@@ -1,3 +1,12 @@
-#app {
-  @apply dark:bg-gray-600;
+body {
+  @apply size-screen;
+}
+
+#app,
+#main {
+  @apply size-full dark:bg-gray-600;
+}
+
+#main {
+  @apply px-10vw;
 }

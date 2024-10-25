@@ -18,6 +18,7 @@ export default [
   AutoImport({
     resolvers: [ElementPlusResolver()],
     imports: ["vue", "vue-router", "pinia", "@vueuse/core"],
+    dirs: ["src/enum", "src/api/*"],
     dts: "types/auto-imports.d.ts",
   }),
 

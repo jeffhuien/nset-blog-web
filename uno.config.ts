@@ -3,6 +3,7 @@ import { defineConfig, presetAttributify, presetIcons, presetTypography, presetU
 
 export default defineConfig({
   shortcuts: {
+    "flex-col": "flex flex-col gap-2",
     "flex-center": "flex justify-center items-center",
     "flex-x-center": "flex justify-center",
     "flex-y-center": "flex items-center",

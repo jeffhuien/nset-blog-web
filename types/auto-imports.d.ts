@@ -6,10 +6,13 @@
 // biome-ignore lint: disable
 export {}
 declare global {
+  const CacheEnum: typeof import('../src/enum/Cache.enum')['CacheEnum']
   const EffectScope: typeof import('vue')['EffectScope']
   const acceptHMRUpdate: typeof import('pinia')['acceptHMRUpdate']
   const asyncComputed: typeof import('@vueuse/core')['asyncComputed']
+  const authApi: typeof import('../src/api/auth/index')['authApi']
   const autoResetRef: typeof import('@vueuse/core')['autoResetRef']
+  const commonApi: typeof import('../src/api/common/index')['commonApi']
   const computed: typeof import('vue')['computed']
   const computedAsync: typeof import('@vueuse/core')['computedAsync']
   const computedEager: typeof import('@vueuse/core')['computedEager']

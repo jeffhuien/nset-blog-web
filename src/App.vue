@@ -8,10 +8,7 @@ onBeforeMount(() => {
 </script>
 
 <template>
-  <div size-screen center text-100px text-primary>
-    <div class="i-mdi-hail"></div>
-    <div>hello</div>
-  </div>
+  <router-view></router-view>
 </template>
 
 <style lang="scss"></style>

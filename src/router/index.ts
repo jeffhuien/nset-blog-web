@@ -1,23 +1,36 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import { createRouter, createWebHistory } from "vue-router";
+import guard from "./guard";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/',
-      name: 'home',
-      component: HomeView
+      path: "/",
+      name: "home",
+      component: () => import("@/layout/home/index.vue"),
+      children: [
+        {
+          path: "article",
+          name: "article",
+          // meta: { login: true },
+          component: () => import("@/views/article/index.vue"),
+        },
+      ],
     },
     {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/AboutView.vue')
-    }
-  ]
-})
+      path: "/login",
+      name: "login",
+      component: () => import("@/views/login/index.vue"),
+    },
 
-export default router
+    {
+      path: "/:pathMatch(.*)*",
+      name: "404",
+      redirect: "/",
+    },
+  ],
+});
+
+guard(router);
+
+export default router;
