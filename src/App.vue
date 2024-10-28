@@ -8,7 +8,9 @@ onBeforeMount(() => {
 </script>
 
 <template>
-  <router-view></router-view>
+  <main class="size-full p-2">
+    <router-view></router-view>
+  </main>
 </template>
 
 <style lang="scss"></style>

@@ -8,5 +8,5 @@ body {
 }
 
 #main {
-  @apply px-10vw;
+  @apply xl:px-10vw md:px-1vw;
 }

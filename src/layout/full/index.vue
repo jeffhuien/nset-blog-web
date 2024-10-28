@@ -1,4 +1,4 @@
 <template>
-  common
+  full
   <router-view></router-view>
 </template>
