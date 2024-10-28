@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import guard from "./guard";
+import { setupAutoRouter } from "./autoRouter";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -7,6 +8,7 @@ const router = createRouter({
     {
       path: "/",
       name: "home",
+      redirect: "/article",
       component: () => import("@/layout/home/index.vue"),
       children: [
         {
@@ -34,3 +36,4 @@ const router = createRouter({
 guard(router);
 
 export default router;
+setupAutoRouter();
