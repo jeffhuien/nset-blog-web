@@ -8,9 +8,11 @@ onBeforeMount(() => {
 </script>
 
 <template>
-  <main class="size-full p-2">
-    <router-view></router-view>
-  </main>
+  <el-scrollbar>
+    <main class="size-full p-2">
+      <router-view></router-view>
+    </main>
+  </el-scrollbar>
 </template>
 
 <style lang="scss"></style>

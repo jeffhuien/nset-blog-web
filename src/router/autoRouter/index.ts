@@ -31,7 +31,9 @@ export const setupAutoRouter = () => {
   const autoRouters = [];
   for (let index = 0; index < t.length; index++) {
     const element = t[index];
-    router.addRoute("home", element);
+    console.log(element);
+
+    router.addRoute("index", element);
     autoRouters.push(element);
   }
   return autoRouters;

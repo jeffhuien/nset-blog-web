@@ -12,9 +12,12 @@ export default defineConfig({
     "absolute-lt": "absolute left-0 top-0",
     "absolute-rt": "absolute right-0 top-0 ",
     "fixed-lt": "fixed left-0 top-0",
-    "cancel-btn": "b-2 b-primary  bg-conBg text-primary",
+    "cancel-btn": "b-2 b-primary  bg-conbg text-primary",
     center: "flex justify-center items-center gap-2 flex-wrap",
+    itemBox: "rounded-2xl p-4",
+    noSelect: "select-none",
   },
+
   rules: [
     //
     [/^text-primary(\d+)$/, ([, d]) => ({ color: `var(--el-color-primary-light-${d})` })],
@@ -27,7 +30,7 @@ export default defineConfig({
       primary: "var(--el-color-primary)",
       primary_dark: "var(--el-color-primary-light-9)",
       textColor: "var(--text-color)",
-      conBg: "var(--component-bg)",
+      conbg: "var(--component-bg)",
     },
   },
   presets: [

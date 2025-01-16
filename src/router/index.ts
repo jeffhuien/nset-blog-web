@@ -7,16 +7,16 @@ const router = createRouter({
   routes: [
     {
       path: "/",
-      name: "home",
+      name: "index",
       redirect: "/article",
       component: () => import("@/layout/home/index.vue"),
       children: [
-        {
-          path: "article",
-          name: "article",
-          // meta: { login: true },
-          component: () => import("@/views/article/index.vue"),
-        },
+        // {
+        //   path: "article",
+        //   name: "article",
+        //   // meta: { login: true },
+        //   component: () => import("@/views/article/index.vue"),
+        // },
       ],
     },
     {

@@ -1,4 +1,5 @@
 import Color from "color";
+import dayjs from "dayjs";
 export function changeColor(newThemeColor: string) {
   const rootStyle = document.documentElement.style;
   rootStyle.setProperty(`--el-color-primary`, newThemeColor);
@@ -16,3 +17,11 @@ export function getFieldData(obj: Record<string, field>) {
     })
   );
 }
+
+export const custom_formatDate = (date: string, formatStr?: string) => {
+  if (formatStr) {
+    return dayjs(date).format(formatStr);
+  } else {
+    return dayjs(date).format("YYYY-MM-DD HH:mm:ss");
+  }
+};

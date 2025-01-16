@@ -1,9 +1,12 @@
-:root {
-  --color: red;
-}
-
 html.dark {
-  --color: blue;
+  --text-color: #dddcdc;
+  --component-bg: #5c6169;
 }
 
+$menu-width: 230px;
 $primary: #a57ff8;
+
+:root {
+  --component-bg: #ffffffd3;
+  --text-color: #222222;
+}
